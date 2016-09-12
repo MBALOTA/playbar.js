@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="playbar.js Example Site">
+    <meta name="keywords" content="Matthias,Balota,Matthias Balota,playbar.js,PlayBar,playbar,PLAYBAR.JS,JavaScript">
+    <meta name="author" content="Matthias Balota">
+
+    <title>PlayBar</title>
+    <link rel="stylesheet" href="css/playbar.min.css">
+  </head>
+  <body>
+    <div class="centerWrapper">
+      <div class="text">
+        <h1>playbar.js</h1>
+        <p>is a small and simple playbar written in pure js.<br><br>Download it from <a href="https://github.com/MBALOTA" target="_blank">GitHub</a>!<br><br>Why can't i click on it to make it move? I didn't want to add this.<br>I'll add this if people really want it.<br><br>You can open up the console and type in <code>playBarHorizontal.setProgress(10);</code> or <code>playBarVertical.setPreviewProgress(100);</code> to see what changes.</p>
+      </div>
+      <div id="playbarWrapperHorizontal">
+        <button id="playbarHorizontalButton"></button>
+        <div id="playbarHorizontalProgress"></div>
+        <div id="playbarHorizontalProgressPreview"></div>
+      </div>
+      <div id="playbarWrapperVertical">
+        <button id="playbarVerticalButton"></button>
+        <div id="playbarVerticalProgress"></div>
+        <div id="playbarVerticalProgressPreview"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Like this? Check out my portfolio site! <a href="http://balota.me" target="_blank">balota.me</a></p>
+    </div>
+    <script src="js/playbar.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var playBarHorizontal = new playBar("#playbarWrapperHorizontal", {buttonId: "#playbarHorizontalButton", progressId: "#playbarHorizontalProgress", previewId: "#playbarHorizontalProgressPreview", showPreview: true, buttonOffset: {x: -6, y:0}});
+      playBarHorizontal.setProgress(50);
+      playBarHorizontal.setPreviewProgress(70);
+
+      var playBarVertical = new playBar("#playbarWrapperVertical", {buttonId: "#playbarVerticalButton", progressId: "#playbarVerticalProgress", previewId: "#playbarVerticalProgressPreview", barType: "vertical", showPreview: true, buttonOffset: {x: 0, y: -6}});
+      playBarVertical.setProgress(60);
+      playBarVertical.setPreviewProgress(80);
+
+    </script>
+  </body>
+</html>
