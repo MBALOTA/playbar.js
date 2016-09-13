@@ -19,9 +19,9 @@ Don't worry, a lot of the options are "optional" *badum tsss*.
 
 There are 2 functions:
 ```js
-  playBar.setProgress(number); // 0-100, progressId.style.width/height & buttonId.style.left/bottom will be set to px
-  playBar.setPreviewProgress(number); /* 0-100, the button will update its position, 
-                                                if the preview progress isn't equal to progress nor 0 */
+playBar.setProgress(number); // 0-100, progressId.style.width/height & buttonId.style.left/bottom will be set to px
+playBar.setPreviewProgress(number); /* 0-100, the button will update its position, 
+                                              if the preview progress isn't equal to progress nor 0 */
 ```
 
 For more information check out the pretty version! playbar.js
