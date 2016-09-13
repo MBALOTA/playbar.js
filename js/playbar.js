@@ -40,16 +40,20 @@ function updateDOM (playBar) {
   if(playBar.previewProgress!==0 && playBar.previewProgress!== playBar.progress) buttonProgress = playBar.previewProgress;
 
   if(playBar.barType==="horizontal") {
-    progressEl.style.width = playBar.progress+"%";
+    progressEl.style.width = wrapperEl.offsetWidth / 100 * playBar.progress+"px";
+    if(progressEl.offsetWidth >= wrapperEl.offsetWidth) progressEl.style.width = wrapperEl.offsetWidth+"px";
+
     var buttonLeftInPX = wrapperEl.offsetWidth / 100 * buttonProgress + playBar.buttonOffset.x;
-    var buttonLeftInPR = 100.00 / wrapperEl.offsetWidth * buttonLeftInPX;
+    //var buttonLeftInPR = 100.00 / wrapperEl.offsetWidth * buttonLeftInPX;
     //console.log(buttonLeftInPX+ "px, "+buttonLeftInPR+"%");
 
-    buttonEl.style.left = buttonLeftInPR+"%";
+    buttonEl.style.left = buttonLeftInPX+"px";
     if(playBar.showPreview) previewEl.style.width = playBar.previewProgress+"%";
 
   } else if (playBar.barType==="vertical") {
     progressEl.style.height = playBar.progress+"%";
+    if(progressEl.offsetHeight >= wrapperEl.offsetHeight) progressEl.style.height = wrapperEl.offsetHeight+"px";
+
     var buttonBottomInPX = wrapperEl.offsetHeight / 100 * buttonProgress + playBar.buttonOffset.y;
     var buttonBottomInPR = 100.00 / wrapperEl.offsetHeight * buttonBottomInPX;
 
