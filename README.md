@@ -1,5 +1,5 @@
 # playbar.js
-A small and simple playbar written in pure js. Check the example web site
+A small and simple playbar written in pure js. Check the example [website] (https://mbalota.github.io/playbar.js/).
 
 HOW TO USE:
 
