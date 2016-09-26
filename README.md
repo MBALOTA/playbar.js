@@ -22,7 +22,7 @@ There are 2 functions:
 ```js
 playBar.setProgress(number); //0-100, progressId.style.width/height & buttonId.style.left/bottom will be set to px
 playBar.setPreviewProgress(number); /* 0-100, the button will update its position,
-                                              if the preview progress isn't smaller than the normal progress nor 0 */
+                                              if the preview progress option is enabled and if the preview progress isn't 0 */
 ```
 
 For more information check out the pretty version! playbar.js

@@ -41,7 +41,7 @@ function updateDOM (playBar) {
   };
 
   var buttonProgress = playBar.progress;
-  if(playBar.showPreview&&playBar.previewProgress!==0 && playBar.previewProgress>= playBar.progress) buttonProgress = playBar.previewProgress;
+  if(playBar.showPreview&&playBar.previewProgress!==0) buttonProgress = playBar.previewProgress;
 
   if(playBar.barType==="horizontal")
   {
@@ -137,6 +137,6 @@ var playBar = function (id, options) {
   return pb;
 };
 
-// exports.playBar = function(id, options) {
-//   return playBar(id,options);
-// }
+exports.playBar = function(id, options) {
+  return playBar(id,options);
+}
