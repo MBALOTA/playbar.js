@@ -10,7 +10,7 @@ HOW TO USE:
                                                 buttonId: "#bid",     //default: "#playBarButton"
                                                 progressId: "#pid",   //default: "#playBarProgress"
                                                 previewId: "#ppid",   //default: "#playBarProgressPreview"
-                                                enableButtonOffset: true, //to enable out of range button offset, inkl. custom offset
+                                                enableButtonOffset: true, //to enable out of range button offset, incl. custom offset
                                                 buttonOffset: {5,0},  //x,y IN PX
                                                 barType: "horizontal",//can be "vertical"
                                                 showPreview: true
