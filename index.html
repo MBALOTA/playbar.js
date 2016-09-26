@@ -31,10 +31,10 @@
     </div>
     <script src="js/playbar.js" charset="utf-8"></script>
     <script type="text/javascript">
-      var playBarHorizontal = new playBar("#playbarWrapperHorizontal", {buttonId: "#playbarHorizontalButton", progressId: "#playbarHorizontalProgress", previewId: "#playbarHorizontalProgressPreview", showPreview: true, buttonOffset: {x: -6, y:0}});
+      var playBarHorizontal = new playBar("#playbarWrapperHorizontal", {buttonId: "#playbarHorizontalButton", progressId: "#playbarHorizontalProgress", previewId: "#playbarHorizontalProgressPreview", showPreview: true, enableButtonOffset:true, buttonOffset: {x: -6, y:0}});
       playBarHorizontal.setProgress(50);
 
-      var playBarVertical = new playBar("#playbarWrapperVertical", {buttonId: "#playbarVerticalButton", progressId: "#playbarVerticalProgress", previewId: "#playbarVerticalProgressPreview", barType: "vertical", showPreview: true, buttonOffset: {x: 0, y: -6}});
+      var playBarVertical = new playBar("#playbarWrapperVertical", {buttonId: "#playbarVerticalButton", progressId: "#playbarVerticalProgress", previewId: "#playbarVerticalProgressPreview", barType: "vertical", showPreview: true, enableButtonOffset:true, buttonOffset: {x: 0, y: -6}});
       playBarVertical.setProgress(20);
 
     </script>

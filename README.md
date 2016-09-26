@@ -10,6 +10,7 @@ HOW TO USE:
                                                 buttonId: "#bid",     //default: "#playBarButton"
                                                 progressId: "#pid",   //default: "#playBarProgress"
                                                 previewId: "#ppid",   //default: "#playBarProgressPreview"
+                                                enableButtonOffset: true, //to enable out of range button offset, inkl. custom offset
                                                 buttonOffset: {5,0},  //x,y IN PX
                                                 barType: "horizontal",//can be "vertical"
                                                 showPreview: true
@@ -20,12 +21,12 @@ Don't worry, a lot of the options are "optional" *badum tsss*.
 There are 2 functions:
 ```js
 playBar.setProgress(number); //0-100, progressId.style.width/height & buttonId.style.left/bottom will be set to px
-playBar.setPreviewProgress(number); /* 0-100, the button will update its position, 
-                                              if the preview progress isn't equal to progress nor 0 */
+playBar.setPreviewProgress(number); /* 0-100, the button will update its position,
+                                              if the preview progress isn't smaller than the normal progress nor 0 */
 ```
 
 For more information check out the pretty version! playbar.js
-  
+
 THIS PROJECT USES THE UNLICENSE.
 
 -[Matthias Balota] (http://balota.me/)
