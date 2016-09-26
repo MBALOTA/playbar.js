@@ -137,6 +137,6 @@ var playBar = function (id, options) {
   return pb;
 };
 
-exports.playBar = function(id, options) {
-  return playBar(id,options);
-}
+// exports.playBar = function(id, options) {
+//   return playBar(id,options);
+// }
