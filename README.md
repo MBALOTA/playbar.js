@@ -21,7 +21,7 @@ HOW TO USE:
 ```
 Don't worry, a lot of the options are "optional" *badum tsss*.
 
-**FOR MORE DOCUMENTATION READ THE DEV-COMMENTS IN THE NORMAL playbar.js!
+**FOR MORE DOCUMENTATION READ THE DEV-COMMENTS IN THE NORMAL playbar.js!**
 
 There are 3 functions:
 ```js
