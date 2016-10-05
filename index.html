@@ -5,6 +5,7 @@
     <meta name="description" content="playbar.js Example Site">
     <meta name="keywords" content="Matthias,Balota,Matthias Balota,playbar.js,PlayBar,playbar,PLAYBAR.JS,JavaScript">
     <meta name="author" content="Matthias Balota">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>PlayBar</title>
     <link rel="stylesheet" href="css/playbar.min.css">
@@ -13,12 +14,13 @@
     <div class="centerWrapper">
       <div class="text">
         <h1>playbar.js</h1>
-        <p>is a small and simple playbar written in pure js.<br><br>Download it from <a href="https://github.com/MBALOTA/playbar.js" target="_blank">GitHub</a>!<br><br>Why can't i click on it to make it move? I didn't want to add this.<br>I'll add this if people really want it.<br><br>You can open up the console and type in <code>playBarHorizontal.setPreviewProgress(80);</code> or <code>playBarVertical.setProgress(60);</code> to see what changes.</p>
+        <p>is a small and simple playbar written in pure js.<br><br>Download it from <a href="https://github.com/MBALOTA/playbar.js" target="_blank">GitHub</a>!<br><br>Why can't I click on it to make it move?<br>Because evil ducklings stole the code.<br><br>You can open up the console and type in <code>playBarHorizontal.setProgress(80);</code><code>playBarHorizontal.setLoadedProgress(90);</code> or <code>playBarVertical.setPreviewProgress(60);</code> to see what changes.</p>
       </div>
       <div id="playbarWrapperHorizontal">
         <button id="playbarHorizontalButton"></button>
-        <div id="playbarHorizontalProgress"></div>
         <div id="playbarHorizontalProgressPreview"></div>
+        <div id="playbarHorizontalProgress"></div>
+        <div id="playbarHorizontalProgressLoaded"></div>
       </div>
       <div id="playbarWrapperVertical">
         <button id="playbarVerticalButton"></button>
@@ -27,12 +29,13 @@
       </div>
     </div>
     <div class="footer">
-      <p>Like this? Check out my portfolio site! <a href="http://balota.me" target="_blank">balota.me</a></p>
+      <p>Want more dope stuff? <a href="http://balota.me" target="_blank">balota.me</a></p>
     </div>
     <script src="js/playbar.js" charset="utf-8"></script>
     <script type="text/javascript">
-      var playBarHorizontal = new playBar("#playbarWrapperHorizontal", {buttonId: "#playbarHorizontalButton", progressId: "#playbarHorizontalProgress", previewId: "#playbarHorizontalProgressPreview", showPreview: true, enableButtonOffset:true, buttonOffset: {x: -6, y:0}});
+      var playBarHorizontal = new playBar("#playbarWrapperHorizontal", {buttonId: "#playbarHorizontalButton", progressId: "#playbarHorizontalProgress", previewId: "#playbarHorizontalProgressPreview", loadedId: "#playbarHorizontalProgressLoaded", showPreview: true, showLoaded:true, moveButtonToPreview:true, enableButtonOffset:true, buttonOffset: {x: -6, y:0}});
       playBarHorizontal.setProgress(50);
+      playBarHorizontal.setLoadedProgress(70);
 
       var playBarVertical = new playBar("#playbarWrapperVertical", {buttonId: "#playbarVerticalButton", progressId: "#playbarVerticalProgress", previewId: "#playbarVerticalProgressPreview", barType: "vertical", showPreview: true, enableButtonOffset:true, buttonOffset: {x: 0, y: -6}});
       playBarVertical.setProgress(20);
